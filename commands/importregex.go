@@ -85,7 +85,7 @@ func newzNabRegexToRegex(parsed []string) (*types.Regex, error) {
 	return &dbregex, nil
 }
 
-var splitRegex = regexp.MustCompile(`\((\d+), \'(.*)\', \'(.*)\', (.*), (\d+), (\d+), (.*), (.*)\);$`)
+var splitRegex = regexp.MustCompile(`\((\d+),\'(.*)\',\'(.*)\',(.*),(\d+),(\d+),(.*),(.*)\);$`)
 
 func parseNewzNabRegexes(b []byte) ([]*types.Regex, error) {
 	r := bufio.NewReader(bytes.NewReader(b))

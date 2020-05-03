@@ -7,16 +7,16 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/sirupsen/logrus"
 	"github.com/codegangsta/negroni"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/gorilla/context"
-	"github.com/gorilla/mux"
 	"github.com/enigmaquip/gonab/config"
 	"github.com/enigmaquip/gonab/db"
-	"github.com/meatballhat/negroni-logrus"
+	"github.com/gorilla/context"
+	"github.com/gorilla/mux"
+	negronilogrus "github.com/meatballhat/negroni-logrus"
 	"github.com/phyber/negroni-gzip/gzip"
 	"github.com/rs/cors"
+	"github.com/sirupsen/logrus"
 )
 
 const (
@@ -25,7 +25,7 @@ const (
 
 // RunAPIServer sets up and starts a server to provide the NewzNab API
 func RunAPIServer(cfg *config.Config) {
-	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Verbose)
+	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Host, cfg.DB.Verbose)
 	n := configRoutes(dbh)
 	fmt.Println("Starting server on :8078")
 	n.Run(":8078")

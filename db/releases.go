@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/sirupsen/logrus"
 	"github.com/enigmaquip/gonab/categorize"
 	"github.com/enigmaquip/gonab/nzb"
 	"github.com/enigmaquip/gonab/types"
 	"github.com/jinzhu/gorm"
+	"github.com/sirupsen/logrus"
 )
 
 // SearchReleases does what it says.
@@ -171,12 +171,12 @@ func (d *Handle) MakeReleases() error {
 
 		hash := makeShaHash(cleanName, b.GroupName, strconv.FormatInt(b.Posted.Unix(), 10), strconv.FormatInt(dbbin.Size(), 10))
 		rel, err := d.FindReleaseByHash(hash)
-		if err != nil && err != gorm.RecordNotFound {
+		if err != nil && gorm.IsRecordNotFoundError(err) {
 			return err
 		}
 		if err == nil {
 			logrus.Infof("Found duplicate release hash: %s for binary %s", rel.Hash, b.Name)
-			err = deleteBinary(&d.DB, dbbin)
+			err = deleteBinary(d.DB, dbbin)
 			if err != nil {
 				return err
 			}
@@ -192,7 +192,7 @@ func (d *Handle) MakeReleases() error {
 		// Check if too few files
 		if len(dbbin.Parts) < grp.MinFiles {
 			logrus.Infof("Too few files for %s in group %s (%d < %d)", b.Name, grp.Name, len(dbbin.Parts), grp.MinFiles)
-			err = deleteBinary(&d.DB, dbbin)
+			err = deleteBinary(d.DB, dbbin)
 			if err != nil {
 				return err
 			}

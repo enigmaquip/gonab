@@ -1,8 +1,8 @@
 package commands
 
 import (
-	"github.com/sirupsen/logrus"
 	"github.com/enigmaquip/gonab/db"
+	"github.com/sirupsen/logrus"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
@@ -18,6 +18,6 @@ func (s *BinariesCommand) run(c *kingpin.ParseContext) error {
 	}
 	cfg := loadConfig(*configfile)
 
-	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Verbose)
+	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Host, cfg.DB.Verbose)
 	return dbh.MakeBinaries()
 }

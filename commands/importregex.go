@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sirupsen/logrus"
 	"github.com/enigmaquip/gonab/db"
 	"github.com/enigmaquip/gonab/types"
 	"github.com/hobeone/rss2go/httpclient"
+	"github.com/sirupsen/logrus"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
@@ -276,7 +276,7 @@ func (regeximporter *RegexImporter) run(c *kingpin.ParseContext) error {
 	}
 	logrus.Infof("Parsed %d regexes from %s", len(regexes), url)
 
-	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Verbose)
+	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Host, cfg.DB.Verbose)
 	newcount := 0
 	tx := dbh.DB.Begin()
 	tx.Where("id < ?", 100000).Delete(&types.Regex{})

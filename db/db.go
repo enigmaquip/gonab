@@ -9,9 +9,10 @@ import (
 	"time"
 
 	"github.com/DavidHuie/gomigrate"
-	"github.com/sirupsen/logrus"
 	"github.com/enigmaquip/gonab/types"
 	"github.com/jinzhu/gorm"
+	"github.com/sirupsen/logrus"
+
 	// Import mysql
 	_ "github.com/go-sql-driver/mysql"
 
@@ -21,7 +22,7 @@ import (
 
 //Handle Struct
 type Handle struct {
-	DB           gorm.DB
+	DB           *gorm.DB
 	writeUpdates bool
 	syncMutex    sync.Mutex
 }
@@ -44,7 +45,7 @@ func (d *debugLogger) Print(msg ...interface{}) {
 	d.logger.Debug(msg)
 }
 
-func openDB(dbType string, dbArgs string, verbose bool) gorm.DB {
+func openDB(dbType string, dbArgs string, verbose bool) *gorm.DB {
 	logrus.Infof("Opening database %s:%s", dbType, dbArgs)
 	// Error only returns from this if it is an unknown driver.
 	d, err := gorm.Open(dbType, dbArgs)
@@ -62,15 +63,15 @@ func openDB(dbType string, dbArgs string, verbose bool) gorm.DB {
 	return d
 }
 
-func constructDBPath(dbname, dbuser, dbpass string) string {
-	return fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=True&loc=Local", dbuser, dbpass, dbname)
+func constructDBPath(dbname, dbuser, dbpass, dbhost string) string {
+	return fmt.Sprintf("%s:%s@(%s)/%s?charset=utf8&parseTime=True&loc=Local", dbuser, dbpass, dbhost, dbname)
 }
 
 // NewDBHandle creates a new DBHandle
 //	dbpath: the path to the database to use.
 //	verbose: when true database accesses are logged to stdout
-func NewDBHandle(dbname, dbuser, dbpass string, verbose bool) *Handle {
-	constructedPath := constructDBPath(dbname, dbuser, dbpass)
+func NewDBHandle(dbname, dbuser, dbpass, dbhost string, verbose bool) *Handle {
+	constructedPath := constructDBPath(dbname, dbuser, dbpass, dbhost)
 	db := openDB("mysql", constructedPath, verbose)
 	return &Handle{DB: db}
 }

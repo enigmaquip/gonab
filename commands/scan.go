@@ -113,7 +113,7 @@ func (s *ScanCommand) scan(c *kingpin.ParseContext) error {
 		s.MaxConns = 1
 	}
 
-	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Verbose)
+	dbh := db.NewDBHandle(cfg.DB.Name, cfg.DB.Username, cfg.DB.Password, cfg.DB.Host, cfg.DB.Verbose)
 	var groups []types.Group
 	if s.Group != "" {
 		g, err := dbh.FindGroupByName(s.Group)

@@ -32,6 +32,7 @@ type dbConfig struct {
 	Name     string
 	Username string
 	Password string
+	Host     string
 	Verbose  bool // turn on verbose db logging
 }
 
@@ -51,6 +52,7 @@ func NewConfig() *Config {
 		Regex: regexSource{},
 		DB: dbConfig{
 			Name:    "gonab",
+			Host:    "localhost",
 			Verbose: false,
 		},
 	}

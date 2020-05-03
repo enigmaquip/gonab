@@ -47,15 +47,16 @@ func cleanRegex(re string) string {
 // 1 id
 // 2 group
 // 3 regex
-// 4 ordinal
-// 5 status
-// 6 description
-// 7 categoryID
+// 4 poster
+// 5 ordinal
+// 6 status
+// 7 description
+// 8 categoryID
 func newzNabRegexToRegex(parsed []string) (*types.Regex, error) {
-	if len(parsed) != 8 {
+	if len(parsed) != 9 {
 		return nil, fmt.Errorf("parsed newznab regex should be 8 items")
 	}
-	status, err := strconv.ParseBool(parsed[5])
+	status, err := strconv.ParseBool(parsed[6])
 	if err != nil {
 		logrus.Errorf("Couldn't parse %s to bool, assuming true", parsed[5])
 		status = true
@@ -64,7 +65,7 @@ func newzNabRegexToRegex(parsed []string) (*types.Regex, error) {
 	if err != nil {
 		logrus.Errorf("Couldn't parse id %s, skipping", parsed[1])
 	}
-	ord, err := strconv.Atoi(parsed[4])
+	ord, err := strconv.Atoi(parsed[5])
 	if err != nil {
 		logrus.Errorf("Couldn't parse ordinal %s, skipping", parsed[4])
 	}
@@ -74,7 +75,7 @@ func newzNabRegexToRegex(parsed []string) (*types.Regex, error) {
 		GroupRegex:  parsed[2],
 		Regex:       regex,
 		Status:      status,
-		Description: parsed[6],
+		Description: parsed[7],
 		Ordinal:     ord,
 	}
 	_, err = regexp.Compile(dbregex.Regex)
@@ -84,7 +85,7 @@ func newzNabRegexToRegex(parsed []string) (*types.Regex, error) {
 	return &dbregex, nil
 }
 
-var splitRegex = regexp.MustCompile(`\((\d+), \'(.*)\', \'(.*)\', (\d+), (\d+), (.*), (.*)\);$`)
+var splitRegex = regexp.MustCompile(`\((\d+), \'(.*)\', \'(.*)\', (.*), (\d+), (\d+), (.*), (.*)\);$`)
 
 func parseNewzNabRegexes(b []byte) ([]*types.Regex, error) {
 	r := bufio.NewReader(bytes.NewReader(b))
@@ -106,7 +107,7 @@ func parseNewzNabRegexes(b []byte) ([]*types.Regex, error) {
 		record = strings.TrimSpace(record)
 		matches := splitRegex.FindStringSubmatch(record)
 
-		if len(matches) != 8 {
+		if len(matches) != 9 {
 			logrus.Errorf("Invalid line in regex file: %s", record)
 			badregex++
 			continue

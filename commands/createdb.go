@@ -2,7 +2,7 @@ package commands
 
 import (
 	"github.com/DavidHuie/gomigrate"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

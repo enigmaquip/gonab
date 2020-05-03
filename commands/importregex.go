@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/hobeone/gonab/db"
 	"github.com/hobeone/gonab/types"
 	"github.com/hobeone/rss2go/httpclient"

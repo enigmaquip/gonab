@@ -7,7 +7,7 @@ import (
 	"path"
 	"text/tabwriter"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/hobeone/gonab/db"
 	"github.com/hobeone/gonab/types"
 	"gopkg.in/alecthomas/kingpin.v2"

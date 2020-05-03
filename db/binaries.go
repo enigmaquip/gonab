@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/OneOfOne/xxhash/native"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/hobeone/gonab/types"
 	"github.com/jinzhu/gorm"
 )

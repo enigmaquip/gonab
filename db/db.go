@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/DavidHuie/gomigrate"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/hobeone/gonab/types"
 	"github.com/jinzhu/gorm"
 	// Import mysql

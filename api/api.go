@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/codegangsta/negroni"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gorilla/context"

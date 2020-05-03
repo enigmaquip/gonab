@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/OneOfOne/xxhash/native"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/hobeone/gonab/db"
 	"github.com/hobeone/gonab/types"
 	"github.com/hobeone/nntp"

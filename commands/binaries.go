@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/hobeone/gonab/db"
 	"gopkg.in/alecthomas/kingpin.v2"
 )

@@ -8,7 +8,7 @@ import (
 
 	"github.com/enigmaquip/gonab/types"
 	"github.com/mholt/binding"
-	"gopkg.in/unrolled/render.v1"
+	"github.com/unrolled/render"
 )
 
 type searchReq struct {

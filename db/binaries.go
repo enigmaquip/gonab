@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/OneOfOne/xxhash/native"
-	"github.com/sirupsen/logrus"
+	"github.com/OneOfOne/xxhash"
 	"github.com/enigmaquip/gonab/types"
 	"github.com/jinzhu/gorm"
+	"github.com/sirupsen/logrus"
 )
 
 var (

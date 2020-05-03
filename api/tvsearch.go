@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"gopkg.in/unrolled/render.v1"
+	"github.com/unrolled/render"
 
 	"github.com/mholt/binding"
 )

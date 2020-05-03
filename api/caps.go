@@ -6,7 +6,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"gopkg.in/unrolled/render.v1"
+	"github.com/unrolled/render"
 
 	"github.com/enigmaquip/gonab/types"
 	"github.com/mholt/binding"

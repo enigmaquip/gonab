@@ -3,7 +3,7 @@ package categorize
 import (
 	"testing"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 type categoryMatches struct {

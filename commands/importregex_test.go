@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 	. "github.com/onsi/gomega"
 )
 

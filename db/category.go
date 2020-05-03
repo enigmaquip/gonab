@@ -3,7 +3,7 @@ package db
 import (
 	"sort"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 //GetCategories returns a sorted list of parent categories with their cubcategories

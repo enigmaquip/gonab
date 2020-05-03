@@ -3,7 +3,7 @@ package categorize
 import (
 	"regexp"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 type testFunc func(string, string) types.Category

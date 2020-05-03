@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 func TestSearchReleases(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 
 	"gopkg.in/unrolled/render.v1"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 	"github.com/mholt/binding"
 )
 

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 	"github.com/mholt/binding"
 	"gopkg.in/unrolled/render.v1"
 )

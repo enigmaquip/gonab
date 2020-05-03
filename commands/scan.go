@@ -5,10 +5,10 @@ import (
 	"sync"
 
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/config"
-	"github.com/hobeone/gonab/db"
-	"github.com/hobeone/gonab/nntp"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/config"
+	"github.com/enigmaquip/gonab/db"
+	"github.com/enigmaquip/gonab/nntp"
+	"github.com/enigmaquip/gonab/types"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

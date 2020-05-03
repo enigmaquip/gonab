@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 // Grabbed from golang.org/src/go/printer/printer_test.go

@@ -10,7 +10,7 @@ import (
 
 	"github.com/DavidHuie/gomigrate"
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 	"github.com/jinzhu/gorm"
 	// Import mysql
 	_ "github.com/go-sql-driver/mysql"

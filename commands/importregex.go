@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/db"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/db"
+	"github.com/enigmaquip/gonab/types"
 	"github.com/hobeone/rss2go/httpclient"
 	"gopkg.in/alecthomas/kingpin.v2"
 )

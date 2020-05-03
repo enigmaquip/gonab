@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 // NZB is the top level structure

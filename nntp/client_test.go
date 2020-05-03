@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hobeone/gonab/db"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/db"
+	"github.com/enigmaquip/gonab/types"
 	"github.com/hobeone/nntp"
 
 	. "github.com/onsi/gomega"

@@ -5,8 +5,8 @@ Golang usenet binary indexer
 * Install Mysql
 * Create database gonab and give a user permissions on it
 * [Install Go](https://golang.org/doc/install)
-* Install gonab: `go get -v github.com/hobeone/gonab`
-* Go to directory: `cd $GOPATH/src/github.com/hobeone/gonab/`
+* Install gonab: `go get -v github.com/enigmaquip/gonab`
+* Go to directory: `cd $GOPATH/src/github.com/enigmaquip/gonab/`
 * Copy config_sample.json to config.json and edit it to your satisfaction
 * Compile: `go build`
 * Create the database: `./gonab createdb`

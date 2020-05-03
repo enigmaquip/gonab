@@ -5,11 +5,11 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/OneOfOne/xxhash/native"
+	"github.com/OneOfOne/xxhash"
+	"github.com/enigmaquip/gonab/db"
+	"github.com/enigmaquip/gonab/types"
+	"github.com/enigmaquip/nntp"
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/db"
-	"github.com/hobeone/gonab/types"
-	"github.com/hobeone/nntp"
 )
 
 const defaultMaxOverview = 100000

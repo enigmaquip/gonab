@@ -2,7 +2,7 @@ package commands
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/api"
+	"github.com/enigmaquip/gonab/api"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

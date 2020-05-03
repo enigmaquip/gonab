@@ -2,8 +2,8 @@ package commands
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/config"
-	"github.com/hobeone/gonab/db"
+	"github.com/enigmaquip/gonab/config"
+	"github.com/enigmaquip/gonab/db"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

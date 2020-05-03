@@ -8,8 +8,8 @@ import (
 	"text/tabwriter"
 
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/db"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/db"
+	"github.com/enigmaquip/gonab/types"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/sirupsen/logrus"
-	"github.com/hobeone/gonab/categorize"
-	"github.com/hobeone/gonab/nzb"
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/categorize"
+	"github.com/enigmaquip/gonab/nzb"
+	"github.com/enigmaquip/gonab/types"
 	"github.com/jinzhu/gorm"
 )
 

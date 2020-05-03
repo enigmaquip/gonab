@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/hobeone/gonab/types"
+	"github.com/enigmaquip/gonab/types"
 )
 
 func TestDBCategory(t *testing.T) {

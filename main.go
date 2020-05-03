@@ -5,7 +5,7 @@ import (
 
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/hobeone/gonab/commands"
+	"github.com/enigmaquip/gonab/commands"
 )
 
 func main() {

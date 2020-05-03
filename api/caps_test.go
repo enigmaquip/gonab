@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/hobeone/gonab/db"
+	"github.com/enigmaquip/gonab/db"
 )
 
 func TestCaps(t *testing.T) {

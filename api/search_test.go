@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/hobeone/gonab/db"
+	"github.com/enigmaquip/gonab/db"
 )
 
 func TestSearch(t *testing.T) {

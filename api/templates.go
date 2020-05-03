@@ -10,7 +10,7 @@ var (
   <channel>
     <title>gonab API Search</title>
     <description>gonab Feed</description>
-    <link>https://github.org/hobeone/gonab</link>
+    <link>https://github.org/enigmaquip/gonab</link>
     <language>en-gb</language>
     <webMaster>{{.ContactEmail}}</webMaster>
     <category></category>

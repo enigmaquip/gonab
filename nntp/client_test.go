@@ -6,7 +6,7 @@ import (
 
 	"github.com/enigmaquip/gonab/db"
 	"github.com/enigmaquip/gonab/types"
-	"github.com/hobeone/nntp"
+	"github.com/enigmaquip/nntp"
 
 	. "github.com/onsi/gomega"
 )

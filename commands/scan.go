@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/sirupsen/logrus"
 	"github.com/enigmaquip/gonab/config"
 	"github.com/enigmaquip/gonab/db"
-	"github.com/enigmaquip/gonab/nntp"
+	nntputil "github.com/enigmaquip/gonab/nntp"
 	"github.com/enigmaquip/gonab/types"
+	"github.com/sirupsen/logrus"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 
